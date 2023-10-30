@@ -1,0 +1,9 @@
+<!--pages/publishtext/publishtext.wxml-->
+<!-- <text>pages/publishtext/publishtext.wxml</text> -->
+<view style="width: 100%;">
+  <van-uploader
+  file-list="{{ fileList }}"
+  max-count="2"
+  bind:after-read="afterRead"
+/>
+</view>

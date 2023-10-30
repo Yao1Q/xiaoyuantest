@@ -1,0 +1,61 @@
+<!-- index.wxml
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class="banner">
+<!-- 轮播图 -->
+   <swiper indicator-dots indicator-color="rgba(255,255,255,0.5)"
+   indicator-active-color="#fff" circular autoplay interval="4000">
+      <swiper-item wx:for="{{homeimg}}" wx:key="index">
+          <image src="{{item.url}}"></image>
+      </swiper-item>
+   </swiper>
+   <van-grid>
+    <van-grid-item icon="orders-o" text="成绩中心" />
+    <van-grid-item icon="user-o" text="班级信息" />
+    <van-grid-item bindtap="DiscoverCampus" icon="flower-o" text="枫叶广场" />
+    <van-grid-item icon="search" text="搜索" />
+  </van-grid>
+
+  
+  <van-cell-group inset wx:for="{{newsnighlights}}" wx:key="index" style="margin: 5px;margin-bottom:5000px">
+    <van-cell>
+     <view style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+     {{item.theme}}
+     </view> 
+    </van-cell>
+  <van-cell >
+    <image src="{{item.img}}" />
+  </van-cell>
+</van-cell-group>
+<view style="height: 80px;">
+
+</view>
+
+
+<!-- 底部导航栏 -->
+  <van-tabbar active="{{ active }}" bind:change="onChange" style="margin: 80px;">
+    <van-tabbar-item bindtap="home" icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item bindtap="IntegrationCenter" icon="friends-o">综合中心</van-tabbar-item>
+    <van-tabbar-item bindtap="PersonalCenter" icon="setting-o">个人中心</van-tabbar-item>
+  </van-tabbar>
+</view>

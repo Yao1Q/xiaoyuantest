@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.gongchengjixie.mapper.UserNameMapper">
+    <select id="selectOne" parameterType="String" resultType="org.example.gongchengjixie.entity.UserName">
+        SELECT * FROM userinformation where openid = #{openid}
+    </select>
+
+    <select id="addUser" parameterType="java.util.List" resultType="org.example.gongchengjixie.entity.UserName">
+        INSERT INTO userinformation (id,`name`,openid,userimg,tel)
+        VALUES (#{user[0]},#{user[1]},#{user[2]},#{user[3]},#{user[4]});
+    </select>
+</mapper>

@@ -1,0 +1,80 @@
+<!--pages/discoveringcampus.wxml-->
+<!-- <text>pages/discoveringcampus.wxml</text> -->
+<view style="display: flex;flex-flow: row;flex-wrap: wrap;">
+  <view style="width: 45%;height: 14rem;text-align:center;background: white;border-radius: 17px;margin: 8px;">
+  <van-image
+  width="100%"
+  height="11rem"
+  fit="cover"
+  src="https://img.yzcdn.cn/vant/cat.jpeg"
+/>
+<h1 style="text-align:center;">我是八嘎猫</h1>
+</view>
+<view style="width: 45%;height: 14rem;text-align:center;background: white;border-radius: 17px;margin: 8px;">
+  <van-image
+  width="100%"
+  height="11rem"
+  fit="cover"
+  src="https://tse2-mm.cn.bing.net/th/id/OIP-C.7TyKnOmicDyQnNlqizx53gHaLF?pid=ImgDet&rs=1"
+/>
+<h1 style="text-align:center;">我是油腻男</h1>
+</view>
+<view style="width: 45%;height: 14rem;text-align:center;background: white;border-radius: 17px;margin:8px;">
+  <van-image
+  width="100%"
+  height="11rem"
+  fit="cover"
+  src="https://ts1.cn.mm.bing.net/th/id/R-C.aae2462130a17e0893e33fa50e921bc3?rik=W8K5v4u9SVKW0g&riu=http%3a%2f%2fwww.qubiaoqing.cn%2fpic%2f2020%2f11%2f20%2fskirl1wlsbi.jpg&ehk=lIfDq4TYwZ%2fRCnKtzIuURBOpr%2bElc1UXdAmxxdSpX1M%3d&risl=&pid=ImgRaw&r=0"
+/>
+<h1 style="text-align:center;">精神小伙最带派</h1>
+</view>
+<view style="width: 45%;height: 14rem;text-align:center;background: white;border-radius: 17px;margin: 8px;">
+  <van-image
+  width="100%"
+  height="11rem"
+  fit="cover"
+  src="https://img.yzcdn.cn/vant/cat.jpeg"
+/>
+<h1 style="text-align:center;">我是八嘎猫</h1>
+</view>
+<view style="width: 45%;height: 14rem;text-align:center;background: white;border-radius: 17px;margin: 8px;">
+  <van-image
+  width="100%"
+  height="11rem"
+  fit="cover"
+  src="https://tse2-mm.cn.bing.net/th/id/OIP-C.7TyKnOmicDyQnNlqizx53gHaLF?pid=ImgDet&rs=1"
+/>
+<h1 style="text-align:center;">我是油腻男</h1>
+</view>
+<view style="width: 45%;height: 14rem;text-align:center;background: white;border-radius: 17px;margin:8px;">
+  <van-image
+  width="100%"
+  height="11rem"
+  fit="cover"
+  src="https://ts1.cn.mm.bing.net/th/id/R-C.aae2462130a17e0893e33fa50e921bc3?rik=W8K5v4u9SVKW0g&riu=http%3a%2f%2fwww.qubiaoqing.cn%2fpic%2f2020%2f11%2f20%2fskirl1wlsbi.jpg&ehk=lIfDq4TYwZ%2fRCnKtzIuURBOpr%2bElc1UXdAmxxdSpX1M%3d&risl=&pid=ImgRaw&r=0"
+/>
+<h1 style="text-align:center;">精神小伙最带派</h1>
+</view>
+</view>
+
+
+<view  style="width: 100%;text-align:center;position:fixed; bottom:0;width: 750rpx;margin-bottom: 7%;">
+  <van-button bindtap="publish" icon="plus" round type="info"></van-button>
+  
+</view>
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  closeable
+  custom-style="height: 20%;"
+  bind:close="onClose"
+>
+  <view  style="display: flex;justify-content: center;">
+    <view style="margin: 7% 5%;">
+      <van-button bindtap="addimg" icon="comment-o" type="default">发布图片</van-button> 
+    </view>
+    <view style="margin: 7% 5%;">
+      <van-button bindtap="addtext" icon="photo-o" type="default">发布文字</van-button>
+    </view>
+  </view>
+</van-popup>
