@@ -90,7 +90,7 @@ public class UserNameControlle {
         List<UserName> usernames = userNameMapper.selectOne(username.getOpenid());
         System.out.println(usernames);
         if(usernames==null || usernames.size()!=0 ){
-            System.out.println("老用户");
+            System.out.println("老用户123");
         }else {
             /**
              * 用uuid生成为id
