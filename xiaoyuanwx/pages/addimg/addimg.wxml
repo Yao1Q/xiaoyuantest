@@ -1,3 +1,4 @@
 <!--pages/addimg/addimg.wxml-->
 <!-- <text>pages/addimg/addimg.wxml</text> -->
+<!-- <text>pages/addimg/addimg.wxml</text> -->
 <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
